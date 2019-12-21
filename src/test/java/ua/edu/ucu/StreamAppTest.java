@@ -1,16 +1,18 @@
 package ua.edu.ucu;
 
-import ua.edu.ucu.stream.*;
-import org.junit.Test;
-import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.Test;
+import ua.edu.ucu.stream.AsIntStream;
+import ua.edu.ucu.stream.IntStream;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
- *
  * @author andrii
  */
 public class StreamAppTest {
-    
+
     private IntStream intStream;
 
     @Before
@@ -18,7 +20,7 @@ public class StreamAppTest {
         int[] intArr = {-1, 0, 1, 2, 3};
         intStream = AsIntStream.of(intArr);
     }
-    
+
     @Test
     public void testStreamOperations() {
         System.out.println("streamOperations");

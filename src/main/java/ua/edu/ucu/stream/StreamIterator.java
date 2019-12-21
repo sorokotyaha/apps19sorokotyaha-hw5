@@ -5,7 +5,8 @@ import java.util.Iterator;
 public class StreamIterator implements Iterator<Integer> {
     private int[] ints;
     private int curr = 0;
-    public StreamIterator(int[] ints){
+
+    public StreamIterator(int[] ints) {
         this.ints = ints;
     }
 

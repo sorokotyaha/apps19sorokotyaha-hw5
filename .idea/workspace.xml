@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38563776-5b3b-4411-96fc-ff8a06a1e96c" name="Default Changelist" comment="" />
+    <list default="true" id="38563776-5b3b-4411-96fc-ff8a06a1e96c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/StreamApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/StreamApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/AsIntStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/AsIntStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/DecoratorSI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/DecoratorSI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/FilterSI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/FilterSI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/FlatMapSI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/FlatMapSI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/StreamIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/stream/StreamIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/AsIntStreamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/AsIntStreamTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/StreamAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/StreamAppTest.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +25,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1VCoE29AZhgKuQ2UCk187P1sV4X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Autocomplete" />
   </component>
@@ -134,5 +148,16 @@
       <updated>1576766322440</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

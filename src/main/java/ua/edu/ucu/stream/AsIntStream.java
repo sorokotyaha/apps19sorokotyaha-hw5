@@ -9,7 +9,7 @@ public class AsIntStream implements IntStream {
     private Iterator<Integer> iter;
 
     private AsIntStream(int[] ints) {
-        this.iter =  new StreamIterator(ints);
+        this.iter = new StreamIterator(ints);
     }
 
     private AsIntStream(Iterator<Integer> iter) {
@@ -23,25 +23,25 @@ public class AsIntStream implements IntStream {
 
     @Override
     public Double average() {
-        if (!this.iter.hasNext()){
+        if (!this.iter.hasNext()) {
             throw new IllegalArgumentException();
         }
 
         int count = 0;
         int summ = 0;
-        for (int num: this.getIterable() ) {
+        for (int num : this.getIterable()) {
             summ += num;
-            count +=1;
+            count += 1;
         }
 
-        return (double) summ/count;
+        return (double) summ / count;
 
     }
 
     @Override
     public Integer max() {
 
-        if (!this.iter.hasNext()){
+        if (!this.iter.hasNext()) {
             throw new IllegalArgumentException();
         }
         Integer max = Integer.MIN_VALUE;
@@ -57,7 +57,7 @@ public class AsIntStream implements IntStream {
 
     @Override
     public Integer min() {
-        if (!this.iter.hasNext()){
+        if (!this.iter.hasNext()) {
             throw new IllegalArgumentException();
         }
         Integer min = Integer.MAX_VALUE;
@@ -86,7 +86,7 @@ public class AsIntStream implements IntStream {
 
     @Override
     public Integer sum() {
-        if (!this.iter.hasNext()){
+        if (!this.iter.hasNext()) {
             throw new IllegalArgumentException();
         }
 
@@ -100,7 +100,7 @@ public class AsIntStream implements IntStream {
     }
 
 
-    private Iterable<Integer> getIterable(){
+    private Iterable<Integer> getIterable() {
         Iterator<Integer> it = this.iter;
         return new Iterable<Integer>() {
             @Override
@@ -118,7 +118,7 @@ public class AsIntStream implements IntStream {
 
     @Override
     public void forEach(IntConsumer action) {
-        for (int num: this.getIterable() ) {
+        for (int num : this.getIterable()) {
             action.accept(num);
         }
     }
@@ -136,7 +136,7 @@ public class AsIntStream implements IntStream {
     @Override
     public int reduce(int identity, IntBinaryOperator op) {
         int result = identity;
-        for (int num: this.getIterable() ) {
+        for (int num : this.getIterable()) {
             result = op.apply(result, num);
         }
         return result;
@@ -145,7 +145,7 @@ public class AsIntStream implements IntStream {
     @Override
     public int[] toArray() {
         ArrayList<Integer> arr = new ArrayList<>();
-        for (int num: this.getIterable() ) {
+        for (int num : this.getIterable()) {
             arr.add(num);
         }
         int[] res = new int[arr.size()];
@@ -156,7 +156,7 @@ public class AsIntStream implements IntStream {
 
     }
 
-    public Iterator<Integer> getIter(){
+    public Iterator<Integer> getIter() {
         return this.iter;
     }
 

@@ -25,14 +25,14 @@ public class FilterSI extends DecoratorSI {
     private Integer getNext() {
         if (this.si.hasNext()) {
             int temp = this.si.next();
-            while (!this.pr.test(temp)){
+            while (!this.pr.test(temp)) {
                 if (!this.si.hasNext()) {
                     return null;
                 }
                 temp = this.si.next();
             }
             return temp;
-        }else {
+        } else {
             return null;
         }
 

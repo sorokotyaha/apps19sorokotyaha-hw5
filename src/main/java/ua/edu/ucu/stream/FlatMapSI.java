@@ -13,9 +13,9 @@ public class FlatMapSI extends DecoratorSI {
         super(si);
         this.isf = isf;
         //this.current = new StreamIterator(new int[] {});
-        if (this.si.hasNext()){
-        this.current = (StreamIterator) ((AsIntStream) this.isf.applyAsIntStream(this.si.next())).getIter();}
-        else {
+        if (this.si.hasNext()) {
+            this.current = (StreamIterator) ((AsIntStream) this.isf.applyAsIntStream(this.si.next())).getIter();
+        } else {
             this.current = new StreamIterator(new int[]{});
         }
 
@@ -30,14 +30,12 @@ public class FlatMapSI extends DecoratorSI {
 
     @Override
     public Integer next() {
-        if (!this.current.hasNext()){
+        if (!this.current.hasNext()) {
             this.current = (StreamIterator) ((AsIntStream) this.isf.applyAsIntStream(this.si.next())).getIter();
         }
         return this.current.next();
 
     }
-
-
 
 
 }

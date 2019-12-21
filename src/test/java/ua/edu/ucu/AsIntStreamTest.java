@@ -1,12 +1,14 @@
 package ua.edu.ucu;
 
-import ua.edu.ucu.stream.*;
-import org.junit.Test;
-import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.Test;
+import ua.edu.ucu.stream.AsIntStream;
+import ua.edu.ucu.stream.IntStream;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
- *
  * @author andrii
  */
 public class AsIntStreamTest {
@@ -22,8 +24,8 @@ public class AsIntStreamTest {
         emptyStream = AsIntStream.of(arr);
     }
 
-    @Test (expected = IllegalArgumentException.class)
-    public void testStreamMax(){
+    @Test(expected = IllegalArgumentException.class)
+    public void testStreamMax() {
         System.out.println("streamMax");
         Integer expResult = 3;
         Integer result = intStream.max();
@@ -34,8 +36,8 @@ public class AsIntStreamTest {
 
     }
 
-    @Test (expected = IllegalArgumentException.class)
-    public void testStreamMin(){
+    @Test(expected = IllegalArgumentException.class)
+    public void testStreamMin() {
         System.out.println("streamMin");
         Integer expResult = -1;
         Integer result = intStream.min();
@@ -46,8 +48,8 @@ public class AsIntStreamTest {
 
     }
 
-    @Test (expected = IllegalArgumentException.class)
-    public void testStreamAverage(){
+    @Test(expected = IllegalArgumentException.class)
+    public void testStreamAverage() {
         System.out.println("streamAverage");
         double expResult = 1.0;
         double result = intStream.average();
@@ -59,7 +61,7 @@ public class AsIntStreamTest {
     }
 
     @Test
-    public void testStreamCount(){
+    public void testStreamCount() {
         System.out.println("streamCount");
         long expResult = 5;
         long result = intStream.count();
@@ -71,8 +73,8 @@ public class AsIntStreamTest {
 
     }
 
-    @Test (expected = IllegalArgumentException.class)
-    public void testStreamSum(){
+    @Test(expected = IllegalArgumentException.class)
+    public void testStreamSum() {
         System.out.println("streamSum");
         Integer expResult = 5;
         Integer result = intStream.sum();
@@ -83,7 +85,7 @@ public class AsIntStreamTest {
     }
 
     @Test
-    public void testStreamToArrayEmpty(){
+    public void testStreamToArrayEmpty() {
         System.out.println("streamToArrayEmpty");
         int[] expResult = {};
         int[] result = emptyStream.toArray();
@@ -92,7 +94,7 @@ public class AsIntStreamTest {
     }
 
     @Test
-    public void testStreamForEachEmpty(){
+    public void testStreamForEachEmpty() {
         System.out.println("streamForEachEmpty");
         String expResult = "";
         String result = StreamApp.streamForEach(emptyStream);
@@ -101,21 +103,21 @@ public class AsIntStreamTest {
     }
 
     @Test
-    public void testStreamFilter(){
+    public void testStreamFilter() {
         System.out.println("streamFilter");
         int[] expResult = {0, 1};
-        int[] result = intStream.filter(x -> x >= 0).filter(x -> x <2).toArray();
+        int[] result = intStream.filter(x -> x >= 0).filter(x -> x < 2).toArray();
         assertArrayEquals(expResult, result);
 
         System.out.println("streamFilterEmpty");
         int[] exp = {};
-        int[] res = emptyStream.filter(x -> x >= 0).filter(x -> x <2).toArray();
+        int[] res = emptyStream.filter(x -> x >= 0).filter(x -> x < 2).toArray();
         assertArrayEquals(exp, res);
 
     }
 
     @Test
-    public void testStreamMap(){
+    public void testStreamMap() {
         System.out.println("streamMap");
         int[] expResult = {0, 1, 2, 3, 4};
         int[] result = intStream.map(x -> x + 1).toArray();
@@ -130,7 +132,7 @@ public class AsIntStreamTest {
 
 
     @Test
-    public void testStreamFlatMap(){
+    public void testStreamFlatMap() {
         System.out.println("streamFlatMap");
         int[] expResult = {-1, 0, 0, 1, 1, 2, 2, 3, 3, 4};
         int[] result = intStream.flatMap(x -> AsIntStream.of(x, x + 1)).toArray();
@@ -144,20 +146,18 @@ public class AsIntStreamTest {
     }
 
     @Test
-    public void testStreamReduce(){
+    public void testStreamReduce() {
         System.out.println("streamReduce");
         int expResult = 0;
-        int result = intStream.reduce(1, (x, y) -> x*y);
+        int result = intStream.reduce(1, (x, y) -> x * y);
         assertEquals(expResult, result);
 
         System.out.println("streamReduceEmpty");
         int exp = 1;
-        int res = emptyStream.reduce(1, (x, y) -> x*y);
+        int res = emptyStream.reduce(1, (x, y) -> x * y);
         assertEquals(exp, res);
 
     }
-
-
 
 
 }
